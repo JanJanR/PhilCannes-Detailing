@@ -1,3 +1,4 @@
+import Navbar from '@/comps/Navbar'
 import Head from 'next/head'
 
 export default function Home() {
