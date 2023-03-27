@@ -6,7 +6,9 @@
   align-items: center;
 
   .landing_page__image {
+    position: absolute;
     z-index: -1;
+    width: 100%;
   }
 
   h1 {
@@ -43,7 +45,9 @@
   }
 
   .landing_page__image {
+    position: absolute;
     z-index: -1;
+    width: 100%;
   }
 
 }
