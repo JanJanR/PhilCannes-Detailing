@@ -3,10 +3,12 @@ import Navbar from "./Navbar"
 
 const Layout = ( { children }) => {
   return (
-    <div>
-      <Navbar />
-      { children }
-      <Footer />
+    <div className="grid">
+      <Navbar className="navbar" />
+      <main>
+        { children }
+      </main>
+      <Footer className="footer" />
     </div>
    );
 }

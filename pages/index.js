@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import HeroBoat from '../public/Hero-Boat.png'
+import BoatServ from '../public/boat-services.png'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
@@ -8,10 +10,10 @@ export default function Home() {
       <Head>
         <title>PhilCannes - Home</title>
       </Head>
-      <main className={styles.landing_page}>
+      <div className={styles.landing_page}>
         <div className={styles.landing_page__hero}>
           <h1>PhilCannes<br/>Detailing</h1>
-          <Image className={styles.landing_page__image} src={"/../public/Hero-Boat.png"} fill={true} />
+          <Image className={styles.landing_page__image} src={HeroBoat} />
         </div>
         <div className={styles.landing_page__welcome}>
           <h2>Welcome!</h2>
@@ -27,7 +29,7 @@ export default function Home() {
             <p>Lorem ipsum dolor sit amet. Eos architecto odit sit eaque voluptatem non earum harum At temporibus doloribus.</p>
             <button>Get Quote Now</button>
           </div>
-          <Image className={styles.landing_page__image} src={"/../public/boat-services.png"} fill={true}/>
+          <Image className={styles.landing_page__image} src={BoatServ} fill={true}/>
         </div>
         <div className={styles.border}></div>
         <div className={styles.landing_page__contact}>
@@ -54,7 +56,7 @@ export default function Home() {
             </button>
           </form>
         </div>
-      </main>
+      </div>
     </>
   )
 }

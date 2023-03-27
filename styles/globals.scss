@@ -1,16 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&family=Rubik:wght@300;400;700&display=swap');
+
 body {
+  font-family: 'Rubik';
   font-size: 30px;
   color: black;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 80px auto 80px;
+
+  nav {
+  grid-column: 1 / -1;
+  }
+
+  main {
+    grid-column: 2;
+  }
+
+  footer {
+    grid-column: 1 / -1;
+  }
 }
 
 nav {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #100F0D;
   padding: 0 60px;
   box-shadow: 0px 5px 30px #38B6FF;
+  z-index: 1;
 }
 
 .navbar_links a{
@@ -29,10 +53,12 @@ nav {
 }
 
 h1 {
+
   font-size: 90px;
 }
 
 h2 {
+  font-family: "Pacifico";
   font-size: 60px;
   color: #38B6FF;
 }
