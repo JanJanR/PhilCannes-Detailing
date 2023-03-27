@@ -1,4 +1,6 @@
 body {
+  font-size: 30px;
+  color: black;
   margin: 0;
 }
 
@@ -24,4 +26,28 @@ nav {
   color: white;
   border-bottom: #38B6FF solid 3px;
   transition: all 0.1s;
+}
+
+h1 {
+  font-size: 90px;
+}
+
+h2 {
+  font-size: 60px;
+  color: #38B6FF;
+}
+
+button {
+  background-color: #38B6FF;
+  border: none;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform, 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 20px #38B6FF;
 }
