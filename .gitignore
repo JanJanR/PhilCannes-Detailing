@@ -7,9 +7,7 @@
 /coverage
 
 # next.js
-.next/cache/
-.next/server/
-.next/static/
+/next
 
 # production
 /build
