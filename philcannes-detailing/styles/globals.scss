@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #100F0D;
+  padding: 0 60px;
+  box-shadow: 0px 5px 30px #38B6FF;
+}
+
+.navbar_links a{
+  color: #38B6FF;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 20px;
+  border-bottom: transparent solid 1px;
+  padding-bottom: 5px;
+}
+
+.navbar_links a:hover {
+  color: white;
+  border-bottom: #38B6FF solid 3px;
+  transition: all 0.1s;
+}
