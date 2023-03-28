@@ -134,3 +134,55 @@ footer {
 .footer_youtube:hover {
   transform: scale(1.1);
 }
+
+.border {
+  grid-column: 2;
+  border: 1px solid black;
+  width: 30%;
+  margin: 80px auto;
+  border-radius: 5px;
+}
+
+.page_hero {
+  grid-column: 2;
+  height: 53vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.page_image_1 {
+  margin-top: 70px;
+  grid-column: 1 / -1;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page_para {
+  grid-column: 2;
+}
+
+.page__boat_pics {
+  margin-bottom: 80px;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 50px;
+
+  .page__pic {
+    width: 100%;
+    // height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}

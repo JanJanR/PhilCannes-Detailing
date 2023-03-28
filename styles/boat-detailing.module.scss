@@ -1,0 +1,59 @@
+.boat_detailing__packages {
+  grid-column: 2;
+}
+.boat_detailing__background {
+  grid-column: 1 / -1;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+  position: absolute;
+  bottom: 6%;
+  z-index: -1;
+}
+
+.boat_detailing__cards{
+  display: flex;
+  justify-content: space-around;
+  margin: 140px 0 106px 0;
+}
+
+.boat_detailing__card {
+  background-color: #181818;
+  width: 25%;
+  padding: 50px;
+  border-radius: 30px;
+
+  h3{
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  p {
+    color: #C8C6C6;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  ul{
+    color: white;
+    font-size: 15px;
+    padding-left: 30px;
+  }
+
+  .boat_detailing__price {
+    font-size: 30px;
+    color: white;
+    text-align: right;
+  }
+
+  .boat_detailing__list {
+    margin: 65px 0 90px 0;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+}
