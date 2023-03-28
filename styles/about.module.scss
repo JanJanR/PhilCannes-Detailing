@@ -30,12 +30,13 @@
   margin-bottom: 80px;
   grid-column: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-flow: dense;
   gap: 50px;
 
   .about_page__pic {
     width: 100%;
-    // height: 100%;
+    height: 100%;
     margin: 0 auto;
     object-fit: cover;
     object-position: center;
