@@ -4,18 +4,17 @@ import Boat3 from "../public/boat3.png"
 import Boat4 from "../public/boat4.png"
 import Boat5 from "../public/boat5.png"
 import Boat6 from "../public/boat6.png"
-import styles from "../styles/about.module.scss"
 import Image from "next/image"
 
 export default function Pictures() {
   return (
-    <div className={styles.about_page__boat_pics}>
-      <Image className={styles.about_page__pic} src={Boat1}/>
-      <Image className={styles.about_page__pic} src={Boat2}/>
-      <Image className={styles.about_page__pic} src={Boat3}/>
-      <Image className={styles.about_page__pic} src={Boat4}/>
-      <Image className={styles.about_page__pic} src={Boat5}/>
-      <Image className={styles.about_page__pic} src={Boat6}/>
+    <div className="page__boat_pics">
+      <Image className="page__pic" src={Boat1}/>
+      <Image className="page__pic" src={Boat2}/>
+      <Image className="page__pic" src={Boat3}/>
+      <Image className="page__pic" src={Boat4}/>
+      <Image className="page__pic" src={Boat5}/>
+      <Image className="page__pic" src={Boat6}/>
     </div>
   )
 }

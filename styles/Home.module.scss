@@ -1,16 +1,20 @@
+// Hero
 
 .landing_page__hero {
   grid-column: 2;
-  height: 96vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
 
   h1 {
     text-align: center;
     margin: 0;
   }
 }
+
+// Welcome
 
 .landing_page__welcome {
   grid-column: 2;
@@ -20,6 +24,8 @@
     margin-top: 0;
   }
 }
+
+// Boat-services
 
 .landing_page__boat_services {
   grid-column: 2;
@@ -43,6 +49,8 @@
     margin-bottom: 80px;
   }
 }
+
+// Contact
 
 .landing_page__contact {
   grid-column: 2;
@@ -95,6 +103,8 @@
     }
   }
 }
+
+// Other
 
 .landing_page__image_1 {
   grid-column: 1 / -1;
