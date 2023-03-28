@@ -23,11 +23,9 @@ export default function Home() {
       </div>
       <div className={styles.border}></div>
       <div className={styles.landing_page__boat_services}>
-        <h2>Boat Services</h2>
-        <div className={styles.landing_page__boat_info}>
+          <h2>Boat Services</h2>
           <p>Lorem ipsum dolor sit amet. Eos architecto odit sit eaque voluptatem non earum harum At temporibus doloribus.</p>
           <button>Get Quote</button>
-        </div>
       </div>
       <Image className={styles.landing_page__image_2} src={BoatServ} />
       <div className={styles.border}></div>
