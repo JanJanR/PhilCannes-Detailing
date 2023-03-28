@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import HeroBoat from '../public/Hero-Boat.png'
 import BoatServ from '../public/Group 1.png'
@@ -25,7 +26,9 @@ export default function Home() {
       <div className={styles.landing_page__boat_services}>
           <h2>Boat Services</h2>
           <p>Lorem ipsum dolor sit amet. Eos architecto odit sit eaque voluptatem non earum harum At temporibus doloribus.</p>
-          <button>Get Quote</button>
+          <Link href="/quote">
+            <button>Get Quote</button>
+          </Link>
       </div>
       <Image className={styles.landing_page__image_2} src={BoatServ} />
       <div className={styles.border}></div>
