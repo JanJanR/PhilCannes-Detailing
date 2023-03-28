@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import HeroBoat from '../public/Hero-Boat.png'
-import BoatServ from '../public/boat-services.png'
+import BoatServ from '../public/Group 1.png'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
