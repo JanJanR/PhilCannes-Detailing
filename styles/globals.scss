@@ -1,23 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Julius+Sans+One&family=Lobster+Two:wght@400;700&family=Rubik:wght@300;400;700&display=swap');
+
 body {
-  font-size: 30px;
+  font-family: 'Rubik';
+  font-size: 24px;
   color: black;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 80px auto 80px;
+  min-width: 0;
+  position: relative;
+
+  nav {
+  grid-column: 1 / -1;
+  }
+
+  footer {
+    grid-column: 1 / -1;
+  }
 }
 
 nav {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #100F0D;
   padding: 0 60px;
   box-shadow: 0px 5px 30px #38B6FF;
+  z-index: 1;
 }
 
 .navbar_links a{
   color: #38B6FF;
   text-decoration: none;
-  margin-left: 25px;
-  font-size: 18px;
+  margin-left: 50px;
+  font-size: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-bottom: transparent solid 1px;
   padding-bottom: 5px;
@@ -30,10 +52,13 @@ nav {
 }
 
 h1 {
+  font-family: "lobster two";
   font-size: 90px;
+  line-height: 1.5;
 }
 
 h2 {
+  font-family: "lobster two";
   font-size: 60px;
   color: #38B6FF;
 }
@@ -42,7 +67,7 @@ button {
   background-color: #38B6FF;
   border: none;
   border-radius: 20px;
-  padding: 15px;
+  padding: 10px 40px;
   font-size: 30px;
   cursor: pointer;
   transition: transform, 0.3s;
@@ -50,5 +75,6 @@ button {
 
 button:hover {
   transform: scale(1.1);
+  color: white;
   box-shadow: 1px 1px 20px #38B6FF;
 }

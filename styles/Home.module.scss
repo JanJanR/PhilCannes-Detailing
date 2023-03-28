@@ -1,13 +1,10 @@
 
 .landing_page__hero {
-  height: 100vh;
+  grid-column: 2;
+  height: 96vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .landing_page__image {
-    z-index: -1;
-  }
 
   h1 {
     text-align: center;
@@ -16,16 +13,26 @@
 }
 
 .landing_page__welcome {
+  grid-column: 2;
   margin: 100px 0 100px 0;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    line-height: 2;
+  }
 }
 
 .landing_page__boat_services {
+  grid-column: 2;
   height: 1000px;
   margin: 100px 0 100px 0;
   position: relative;
 
   h2 {
-    padding-top: 80px;
+    padding-top: 40px;
   }
 
   .landing_page__boat_info {
@@ -37,24 +44,23 @@
     align-items: center;
 
     p {
-      font-size: 50px;
+      font-size: 40px;
+      line-height: 1.5;
       text-align: center;
     }
-  }
 
-  .landing_page__image {
-    z-index: -1;
   }
 
 }
 
 .landing_page__contact {
+  grid-column: 2;
   margin: 100px 0 100px 0;
 
   form {
     display: grid;
-    grid-template: auto 200px / repeat(3, 270px);
-    justify-content: center;
+    grid-template: auto 200px / repeat(3, auto);
+    // justify-content: center;
     gap: 70px;
 
     .message {
@@ -90,13 +96,29 @@
     }
 
     .submit {
-      grid-column: 2 / 3 ;
-
+      grid-column: 2 ;
+      margin: 0 auto;
+      width: 75%;
     }
   }
 }
 
+.landing_page__image_1 {
+  grid-column: 1 / -1;
+  position: absolute;
+  z-index: -1;
+}
+
+.landing_page__image_2 {
+  grid-column: 1 / -1;
+  position: absolute;
+  top: 42%;
+  width: 100%;
+  z-index: -1;
+}
+
 .border {
+  grid-column: 2;
   border: 1px solid black;
   width: 30%;
   margin: 0 auto;
