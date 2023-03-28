@@ -54,7 +54,7 @@
 
   form {
     display: grid;
-    grid-template: auto 200px / repeat(3, auto);
+    grid-template: auto 1fr / repeat(3, 1fr);
     gap: 70px;
 
     .message {
@@ -64,7 +64,7 @@
         display: block;
         width: 99%;
         height: 70%;
-        font-size: 24px;
+        font-size: 16px;
         background-color: rgb(239, 239, 239);
         border: none;
         border-bottom: 1px solid #38B6FF;
@@ -91,7 +91,7 @@
 
     .submit {
       grid-column: 1 ;
-      width: 75%;
+      width: 50%;
     }
   }
 }
