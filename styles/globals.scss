@@ -115,10 +115,22 @@ footer {
   color: #0C87EF;
 }
 
+.footer_facebook:hover {
+  transform: scale(1.1);
+}
+
 .footer_instagram {
   color: #CF004B;
 }
 
+.footer_instagram:hover {
+  transform: scale(1.1);
+}
+
 .footer_youtube {
   color: #FF0000;
+}
+
+.footer_youtube:hover {
+  transform: scale(1.1);
 }

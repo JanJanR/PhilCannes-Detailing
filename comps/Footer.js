@@ -10,9 +10,15 @@ const Footer = () => {
       <div className="footer_socialMedia_container">
         <h3>Social Media</h3>
         <div className="footer_socialMedia_logo">
-          <FontAwesomeIcon icon={brands('facebook')} className="footer_facebook" />
-          <FontAwesomeIcon icon={brands('youtube')} className="footer_youtube"/>
-          <FontAwesomeIcon icon={brands('instagram')} className="footer_instagram"/>
+          <a href="https://www.facebook.com/TravisMarcus1722" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={brands('facebook')} className="footer_facebook" />
+          </a>
+          <a href="https://www.youtube.com/@philcannesdetailing/featured" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={brands('youtube')} className="footer_youtube"/>
+          </a>
+          <a href="https://www.instagram.com/philcannes_detailing/" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={brands('instagram')} className="footer_instagram"/>
+          </a>
         </div>
       </div>
       <div className="footer_description">
