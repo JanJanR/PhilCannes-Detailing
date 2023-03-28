@@ -3,14 +3,14 @@
 body {
   font-family: 'Rubik';
   font-size: 24px;
-  color: black;
+  color: #100F0D;
   margin: 0;
   scroll-behavior: smooth;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 80px auto 80px;
+  grid-template-columns: 100px auto 100px;
   min-width: 0;
   position: relative;
 
@@ -61,14 +61,22 @@ h2 {
   font-family: "lobster two";
   font-size: 60px;
   color: #38B6FF;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 30px;
+  color: #38B6FF;
+  font-family: 'Rubik';
+  margin: 0;
 }
 
 button {
   background-color: #38B6FF;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 10px 40px;
-  font-size: 30px;
+  font-size: 24px;
   cursor: pointer;
   transition: transform, 0.3s;
 }
@@ -77,4 +85,40 @@ button:hover {
   transform: scale(1.1);
   color: white;
   box-shadow: 1px 1px 20px #38B6FF;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #100F0D;
+  padding: 0 100px;
+}
+
+.footer_description p {
+  color: white;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer_socialMedia_container {
+  margin: 0 0 69px 60px;
+}
+
+.footer_socialMedia_logo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.footer_facebook {
+  color: #0C87EF;
+}
+
+.footer_instagram {
+  color: #CF004B;
+}
+
+.footer_youtube {
+  color: #FF0000;
 }
