@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link"
 import BoatDetailingHero from "../public/boat-detailing-hero.png"
 import Background from "../public/Group 2.png"
 import styles from "../styles/boat-detailing.module.scss"
@@ -26,39 +27,51 @@ export default function BoatDetailing() {
         <h2>Packages</h2>
         <div className={styles.boat_detailing__cards}>
           <div className={styles.boat_detailing__card}>
-            <h3>Wax and Wash Detail</h3>
-            <p>Lorem ipsum dolor sit amet. Eos officia culpa qui nihil rerum aut voluptatum repellat et eligendi beatae qui autem galisum et minus quis.</p>
-            <ul className={styles.boat_detailing__list}>
-              <li>Wash</li>
-              <li>Non-Skid cleaning</li>
-              <li>Compartment Cleaning</li>
-              <li>Mold & Mildew Cleaning</li>
-              <li>Bright work polishing</li>
-              <li>Rub Rail Down Wax</li>
-              <li>Hull Cleaning</li>
-              <li>Top Side Wax</li>
-            </ul>
-            <p className={styles.boat_detailing__price}>15€/foot</p>
-            <button>Get Quote</button>
+            <div>
+              <h3>Wax and Wash Detail</h3>
+              <p>Lorem ipsum dolor sit amet. Eos officia culpa qui nihil rerum aut voluptatum repellat et eligendi beatae qui autem galisum et minus quis.</p>
+              <ul className={styles.boat_detailing__list}>
+                <li>Wash</li>
+                <li>Non-Skid cleaning</li>
+                <li>Compartment Cleaning</li>
+                <li>Mold & Mildew Cleaning</li>
+                <li>Bright work polishing</li>
+                <li>Rub Rail Down Wax</li>
+                <li>Hull Cleaning</li>
+                <li>Top Side Wax</li>
+              </ul>
+            </div>
+            <div>
+              <p className={styles.boat_detailing__price}>15€/foot</p>
+              <Link href="/quote" >
+                <button>Get Quote</button>
+              </Link>
+            </div>
           </div>
           <div className={styles.boat_detailing__card}>
-            <h3>Oxydation Removal Detail</h3>
-            <p>Lorem ipsum dolor sit amet. Eos officia culpa qui nihil rerum aut voluptatum repellat et eligendi beatae qui autem galisum et minus quis.</p>
-            <ul>
-              <li>Wash</li>
-              <li>Non-Skid cleaning</li>
-              <li>Vinyl Cleaning</li>
-              <li>Compartment Cleaning</li>
-              <li>Mold & Mildew Cleaning</li>
-              <li>Bright work polishing</li>
-              <li>Hull Cleaning</li>
-              <li>Cabin Interior Detail</li>
-              <li>Top Side & Rub Rail Down</li>
-              <li>2 Step Polish</li>
-              <li>Wax</li>
-            </ul>
-            <p className={styles.boat_detailing__price}>15€/foot</p>
-            <button>Get Quote</button>
+            <div>
+              <h3>Oxydation Removal Detail</h3>
+              <p>Lorem ipsum dolor sit amet. Eos officia culpa qui nihil rerum aut voluptatum repellat et eligendi beatae qui autem galisum et minus quis.</p>
+              <ul>
+                <li>Wash</li>
+                <li>Non-Skid cleaning</li>
+                <li>Vinyl Cleaning</li>
+                <li>Compartment Cleaning</li>
+                <li>Mold & Mildew Cleaning</li>
+                <li>Bright work polishing</li>
+                <li>Hull Cleaning</li>
+                <li>Cabin Interior Detail</li>
+                <li>Top Side & Rub Rail Down</li>
+                <li>2 Step Polish</li>
+                <li>Wax</li>
+              </ul>
+            </div>
+              <p className={styles.boat_detailing__price}>15€/foot</p>
+            <div>
+              <Link href="/quote">
+                <button>Get Quote</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@
   border-radius: 30px;
   max-height: 600px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template: 470px / 1fr;
 
   h3{
     text-align: center;
@@ -50,17 +50,18 @@
     font-size: 15px;
     padding-left: 30px;
     line-height: 1.8;
+    margin: 0;
   }
 
   .boat_detailing__price {
     font-size: 24px;
     color: white;
     text-align: right;
-    margin-top: 0;
+    margin: 15px 0;
   }
 
   .boat_detailing__list {
-    margin: 65px 0 70px 0;
+    margin: 65px 0 25px 0;
   }
 
   button {
