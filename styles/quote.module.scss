@@ -1,0 +1,25 @@
+
+.boat_feet {
+  grid-column: 4 / -1;
+}
+
+.quote_page__form {
+  grid-column: 2;
+  margin: 50px 0 100px 0;
+
+  fieldset {
+    grid-column: 1 / 4;
+    border: 1px solid #100F0D;
+    font-size: 16px;
+    padding: 1em;
+    .checkbox {
+      margin-top: 10px;
+
+      input {
+        display: inline-block;
+        width: auto;
+        margin: 20px;
+      }
+    }
+  }
+}

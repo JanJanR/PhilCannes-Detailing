@@ -35,23 +35,23 @@ export default function Home() {
       <div className={styles.landing_page__contact}>
         <h2>Contact Us</h2>
         <form>
-          <label className={styles.first_name}>
+          <label className="first_name">
             First Name
             <input type="text" />
           </label>
-          <label className={styles.email}>
+          <label className="email">
             Email Address
             <input type="text" />
           </label>
-          <label className={styles.phone_number}>
+          <label className="phone_number">
             Phone Number
             <input type="text" />
           </label>
-          <label className={styles.message}>
+          <label className="message">
             Message
             <textarea />
           </label>
-          <button className={styles.submit}>
+          <button className="submit">
             Send
           </button>
         </form>
