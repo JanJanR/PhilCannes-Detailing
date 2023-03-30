@@ -42,7 +42,7 @@ export default function Quote() {
           </fieldset>
           <label className={styles.boat_feet}>
             Boat Feet
-            <input type="text" />
+            <input type="number"/>
           </label>
           <label className="message">
             Message
