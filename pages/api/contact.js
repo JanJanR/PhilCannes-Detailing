@@ -8,18 +8,18 @@ export default function (req, res) {
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      user: 'testingapplication1234567@gmail.com',
+      user: process.env.email,
       pass: process.env.password,
     },
     secure: true,
   });
 
   const mailData = {
-    from: 'testingapplication1234567@gmail.com',
-    to: 'testingapplication1234567@gmail.com',
+    from: process.env.email,
+    to: process.env.email,
     subject: `Message From ${req.body.name}`,
     text: req.body.message,
-    html: ReactDOMServer.renderToString(<div>{req.body.message}</div>)
+    html: ReactDOMServer.renderToString(<div><p>Name:</p> {req.body.name} <p>Message:</p>{req.body.message}</div>)
    }
 
    transporter.sendMail(mailData, function (err, info) {
