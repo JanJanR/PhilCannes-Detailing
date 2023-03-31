@@ -61,21 +61,32 @@ nav {
   box-shadow: 0px 5px 30px #38B6FF;
   z-index: 1;
 
-  .navbar_links a{
-    color: #38B6FF;
-    margin-left: 50px;
-    font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-bottom: transparent solid 1px;
-    padding-bottom: 5px;
+  .dropdown {
+    .bar {
+      color: #38B6FF;
+      display: none;
+    }
 
+    .navbar_links {
+
+      a {
+      color: #38B6FF;
+      margin-left: 50px;
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border-bottom: transparent solid 1px;
+      padding-bottom: 5px;
+      }
+
+      a:hover {
+        color: white;
+        border-bottom: #38B6FF solid 3px;
+        transition: all 0.1s;
+      }
+
+    }
   }
 
-  .navbar_links a:hover {
-    color: white;
-    border-bottom: #38B6FF solid 3px;
-    transition: all 0.1s;
-  }
 }
 
 // Button
@@ -267,4 +278,46 @@ form {
     grid-column: 1 ;
     width: 150px;
   }
+}
+
+// Media Query for Mobile
+
+@media (max-width: 800px) {
+
+  nav {
+    .dropdown {
+      position: relative;
+
+      .bar {
+        display: block;
+      }
+
+      .navbar_links {
+        width: 120px;
+        height: 92vh;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 194%;
+        right: -555%;
+        background-color: #100F0D;
+        padding: 0 1em;
+
+        a {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+}
+
+// Others
+
+.show {
+  display: inline;
+}
+
+.hidden {
+  display: none;
 }
