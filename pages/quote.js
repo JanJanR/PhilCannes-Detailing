@@ -69,9 +69,13 @@ export default function Quote() {
             Email Address
             <input type="email" onChange={(e)=>{setEmail(e.target.value)}} name="email" />
           </label>
-          <label className="phone_number">
+          <label className={styles.phone_number}>
             Phone Number
             <input type="number" onChange={(e)=>{setNumber(e.target.value)}} name="number" />
+          </label>
+          <label className={styles.boat_feet}>
+            Boat Feet
+            <input type="number" onChange={(e)=>{setFeet(e.target.value)}} name="feet"/>
           </label>
           <fieldset onChange={(e)=>{setCheckbox(e.target.value)}}>
             <legend>Choose Package</legend>
@@ -85,10 +89,6 @@ export default function Quote() {
               Oxidation Removal Detail
             </label>
           </fieldset>
-          <label className={styles.boat_feet}>
-            Boat Feet
-            <input type="number" onChange={(e)=>{setFeet(e.target.value)}} name="feet"/>
-          </label>
           <label className="message">
             Message
             <textarea onChange={(e)=>{setMessage(e.target.value)}} name="message"/>
