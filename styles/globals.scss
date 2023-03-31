@@ -130,6 +130,7 @@ footer {
 
 .footer_facebook:hover {
   transform: scale(1.1);
+  filter: drop-shadow(1px 1px 10px #0C87EF);
 }
 
 .footer_instagram {
@@ -138,6 +139,7 @@ footer {
 
 .footer_instagram:hover {
   transform: scale(1.1);
+  filter: drop-shadow(1px 1px 10px #CF004B);
 }
 
 .footer_youtube {
@@ -146,6 +148,7 @@ footer {
 
 .footer_youtube:hover {
   transform: scale(1.1);
+  filter: drop-shadow(1px 1px 10px #FF0000);
 }
 
 .border {
