@@ -1,13 +1,27 @@
-.boat_feet {
-  grid-column: 4 / -1;
-}
 
 .quote_page__form {
   grid-column: 2;
-  margin: 50px 0 100px 0;
+  margin: 0px 0 100px 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  input[type=number]:focus, textarea:focus {
+    border-bottom: 2px solid #38B6FF;
+  }
+
+  .phone_number {
+    grid-column: 5 / -1;
+  }
+
+  .boat_feet {
+    grid-column: 1 / 4;
+  }
 
   fieldset {
-    grid-column: 1 / 4;
+    grid-column: 4 / -1;
     border: 1px solid #100F0D;
     font-size: 16px;
     padding: 1em;
@@ -21,5 +35,38 @@
         margin: 20px;
       }
     }
+  }
+}
+
+@media (max-width: 800px) {
+
+  .quote_page__form {
+
+    .phone_number {
+      grid-column: 1;
+    }
+
+    .boat_feet {
+      grid-column: 2;
+    }
+
+    fieldset {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+
+  .quote_page__form {
+
+    .boat_feet {
+      grid-column: 2;
+    }
+
+    fieldset {
+      grid-column: 1 / -1;
+    }
+
   }
 }

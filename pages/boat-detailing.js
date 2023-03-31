@@ -28,7 +28,7 @@ export default function BoatDetailing() {
         <div className={styles.boat_detailing__cards}>
           <div className={styles.boat_detailing__card}>
             <div>
-              <h3><strong>Wax and Wash <br/>Detail</strong></h3>
+              <h3>Wax and Wash <br/>Detail</h3>
               <p>Lorem ipsum dolor sit amet. Eos officia culpa qui nihil rerum aut voluptatum repellat et eligendi beatae qui autem galisum et minus quis.</p>
               <ul className={styles.boat_detailing__list}>
                 <li>Wash</li>
@@ -50,7 +50,7 @@ export default function BoatDetailing() {
           </div>
           <div className={styles.boat_detailing__card}>
             <div>
-              <h3><strong>Oxydation Removal Detail</strong></h3>
+              <h3>Oxydation Removal Detail</h3>
               <p>Lorem ipsum dolor sit amet. Eos officia culpa qui nihil rerum aut voluptatum repellat et eligendi beatae qui autem galisum et minus quis.</p>
               <ul>
                 <li>Wash</li>
