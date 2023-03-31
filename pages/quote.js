@@ -76,12 +76,12 @@ export default function Quote() {
           <fieldset onChange={(e)=>{setCheckbox(e.target.value)}}>
             <legend>Choose Package</legend>
             <label className={styles.checkbox} >
-              <input type="checkbox" value="wash" />
+              <input type="checkbox" value="Wash and Wax Detail" />
               Wash and Wax Detail
             </label>
             <br/>
             <label className={styles.checkbox} >
-              <input type="checkbox" value="oxidation"/>
+              <input type="checkbox" value="Oxidation Removal Detail"/>
               Oxidation Removal Detail
             </label>
           </fieldset>
