@@ -14,6 +14,9 @@ export default function (req, res) {
     secure: true,
   });
 
+  console.log(process.env.email)
+
+
   const mailData = {
     from: process.env.email,
     to: process.env.email,

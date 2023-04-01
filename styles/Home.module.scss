@@ -85,10 +85,27 @@
   border-radius: 5px;
 }
 
+@media (max-width: 1000px) {
+  .landing_page__image_2 {
+    top: 44%;
+  }
+}
+
+@media (max-width: 800px) {
+  .landing_page__image_2 {
+    top: 40%;
+  }
+}
+
 @media (max-width: 650px){
   .landing_page__boat_services {
     p {
       font-size: 24px;
     }
   }
+
+  .landing_page__image_2 {
+    top: 41%;
+  }
+
 }
