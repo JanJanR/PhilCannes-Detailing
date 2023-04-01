@@ -2,6 +2,7 @@ import Head from "next/head"
 import styles from "../styles/quote.module.scss"
 import Image from "next/image"
 import QuoteHero from "../public/quote1.png"
+import Link from 'next/link'
 
 import { useState } from 'react'
 
@@ -16,7 +17,6 @@ export default function Quote() {
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = (e) => {
-    e.preventDefault()
     console.log('Sending')
     let data = {
       name,
@@ -93,9 +93,11 @@ export default function Quote() {
             Message
             <textarea onChange={(e)=>{setMessage(e.target.value)}} name="message"/>
           </label>
-          <button className="submit" onClick={(e)=>{handleSubmit(e)}}>
-            Send
-          </button>
+          <Link href="/confirmation">
+            <button className="submit" onClick={(e)=>{handleSubmit(e)}}>
+              Send
+            </button>
+          </Link>
         </form>
       </div>
     </>
