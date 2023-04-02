@@ -41,7 +41,7 @@ export default function Quote() {
     const isValid = validateForm()
     if (isValid) {
       if (!name || !email || !number || !feet || !checkbox || !message) {
-        alert('Please enter all required information')
+        validateForm()
         setFormError(true)
         return
       }
@@ -75,6 +75,7 @@ export default function Quote() {
   }
 
   const validateForm = () => {
+    console.log('validateForm called')
     let errors = {}
 
     if (!name) {
@@ -130,26 +131,26 @@ export default function Quote() {
           <label className="first_name">
             First Name
             <input type="text" onChange={(e)=>{setName(e.target.value)}} name="name" required  />
-            {errors["name"] && <div className="error">{errors["name"]}</div>}
+            {showErrors && errors["name"] && <div className="error">{errors["name"]}</div>}
           </label>
           <label className="email">
             Email Address
             <input type="email" onChange={(e)=>{setEmail(e.target.value)}} name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-            {errors["email"] && <div className="error">{errors["email"]}</div>}
+            {showErrors && errors["email"] && <div className="error">{errors["email"]}</div>}
           </label>
           <label className={styles.phone_number}>
             Phone Number
             <input type="number" onChange={(e)=>{setNumber(e.target.value)}} name="number" required />
-            {errors["number"] && <div className="error">{errors["number"]}</div>}
+            {showErrors && errors["number"] && <div className="error">{errors["number"]}</div>}
 
           </label>
           <label className={styles.boat_feet}>
             Boat Feet
             <input type="number" onChange={(e)=>{setFeet(e.target.value)}} name="feet" required/>
-            {errors["feet"] && <div className="error">{errors["feet"]}</div>}
+            {showErrors && errors["feet"] && <div className="error">{errors["feet"]}</div>}
           </label>
           <fieldset onChange={(e)=>{setCheckbox(e.target.value)}} required>
-          {errors["checkbox"] && <div className="error">{errors["checkbox"]}</div>}
+          {showErrors && errors["checkbox"] && <div className="error">{errors["checkbox"]}</div>}
             <legend>Choose Package</legend>
             <label className={styles.checkbox} >
               <input type="checkbox" value="Wash and Wax Detail" />
@@ -164,7 +165,7 @@ export default function Quote() {
           <label className="message">
             Message
             <textarea onChange={(e)=>{setMessage(e.target.value)}} name="message" required/>
-            {errors["message"] && <div className="error">{errors["message"]}</div>}
+            {showErrors && errors["message"] && <div className="error">{errors["message"]}</div>}
           </label>
           <Link href={formFilled ? "/confirmation" : "/quote"}>
             <button className="submit" onClick={(e)=>{handleSubmit(e)}} type="submit">
