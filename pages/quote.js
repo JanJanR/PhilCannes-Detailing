@@ -4,6 +4,7 @@ import Image from "next/image"
 import QuoteHero from "../public/quote1.png"
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { useRouter } from "next/router";
 
 export default function Quote() {
 
@@ -16,14 +17,18 @@ export default function Quote() {
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState({})
   const [formError, setFormError] = useState(false)
+  const [formFilled, setFormFilled] = useState(false)
+  const [showErrors, setShowErrors] = useState(false);
 
-  useEffect(() => {
-    setErrors(validateForm())
-  }, [name, email, number, checkbox, feet, message])
 
+  const router = useRouter();
 
   const handleSubmit = (e) => {
     console.log('Sending')
+    setShowErrors(true);
+    if (Object.keys(errors).length === 0) {
+      setFormFilled(true)
+    }
     let data = {
       name,
       email,
@@ -65,6 +70,10 @@ export default function Quote() {
     }
   }
 
+  if (formFilled) {
+    router.push("/confirmation");
+  }
+
   const validateForm = () => {
     let errors = {}
 
@@ -97,11 +106,15 @@ export default function Quote() {
     if (!message) {
       errors["message"] = "Please enter a message"
     }
-
     return errors
   }
 
+  useEffect(() => {
+    setErrors(validateForm())
+  }, [name, email, number, checkbox, feet, message])
+
   console.log('Errors:', errors)
+
   return (
     <>
       <Head>
@@ -116,7 +129,7 @@ export default function Quote() {
         <form onSubmit={(e) => {handleSubmit(e)}}>
           <label className="first_name">
             First Name
-            <input type="text" onChange={(e)=>{setName(e.target.value)}} name="name" required />
+            <input type="text" onChange={(e)=>{setName(e.target.value)}} name="name" required  />
             {errors["name"] && <div className="error">{errors["name"]}</div>}
           </label>
           <label className="email">
@@ -153,79 +166,13 @@ export default function Quote() {
             <textarea onChange={(e)=>{setMessage(e.target.value)}} name="message" required/>
             {errors["message"] && <div className="error">{errors["message"]}</div>}
           </label>
-          {/* <Link href="/confirmation"> */}
-            <button className="submit" type="submit">
+          <Link href={formFilled ? "/confirmation" : "/quote"}>
+            <button className="submit" onClick={(e)=>{handleSubmit(e)}} type="submit">
               Send
             </button>
-          {/* </Link> */}
+          </Link>
         </form>
       </div>
     </>
   )
 }
-
-// onClick={(e)=>{handleSubmit(e)}}
-
-// fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Accept': 'application/json, text/plain, */*',
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(data)
-    // }).then((res) => {
-    //   console.log('Response received')
-    //   if (res.status === 200) {
-    //     console.log('Response succeeded!')
-    //     setSubmitted(true)
-    //     setName('')
-    //     setEmail('')
-    //     setNumber('')
-    //     setCheckbox('')
-    //     setFeet('')
-    //     setMessage('')
-    //   }
-    // })
-
-
-      // const validateForm = () => {
-  //   let isValid = true
-  //   let errors = {}
-
-  //   if (!name) {
-  //     isValid = false
-  //     errors["name"] = "Please enter your name."
-  //   }
-
-  //   if (!email) {
-  //     isValid = false
-  //     errors["email"] = "Please enter your email address."
-  //   } else if (!/\S+@\S+\.\S+/.test(email)) {
-  //     isValid = false
-  //     errors["email"] = "Please enter a valid email address."
-  //   }
-
-  //   if (!number) {
-  //     isValid = false
-  //     errors["number"] = "Please enter your phone number."
-  //   } else if (!/^[0-9]{10}$/.test(number)) {
-  //     isValid = false
-  //     errors["number"] = "Please enter a valid phone number."
-  //   }
-
-  //   if (!feet) {
-  //     isValid = false
-  //     errors["feet"] = "Please enter the boat feet."
-  //   } else if (feet < 10 || feet > 100) {
-  //     isValid = false
-  //     errors["feet"] = "Boat feet must be between 10 and 100."
-  //   }
-
-  //   if (!checkbox) {
-  //     isValid = false
-  //     errors["checkbox"] = "Please select a package."
-  //   }
-
-  //   setErrors(errors)
-  //   return isValid
-  // }
