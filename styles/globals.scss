@@ -286,6 +286,12 @@ form {
   }
 }
 
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 // Media Query for medium
 
 @media (max-width: 800px) {
