@@ -70,13 +70,9 @@ export default function Quote() {
       message
     }
 
-    const isValid = validateForm()
-    if (isValid) {
-      if (!name || !email || !number || !feet || !checkbox || !message) {
-        validateForm()
-        setFormError(true)
-        return
-      }
+    const isError = validateForm()
+    console.log(isError)
+    if (!isError) {
       fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -114,7 +110,7 @@ export default function Quote() {
     setErrors(validateForm())
   }, [name, email, number, checkbox, feet, message])
 
-  console.log('Errors:', errors)
+  // console.log('Errors:', errors)
 
   return (
     <>
