@@ -20,15 +20,47 @@ export default function Quote() {
   const [formFilled, setFormFilled] = useState(false)
   const [showErrors, setShowErrors] = useState(false);
 
+  const validateForm = () => {
+    console.log('validateForm called')
+    let errors = {}
+    if (!name) {
+      errors["name"] = "Please enter your name."
+    }
+
+    if (!email) {
+      errors["email"] = "Please enter your email address."
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors["email"] = "Please enter a valid email address."
+    }
+
+    if (!number) {
+      errors["number"] = "Please enter your phone number."
+    } else if (!/\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/.test(number)) {
+      errors["number"] = "Please enter a valid phone number."
+    }
+
+    if (!feet) {
+      errors["feet"] = "Please enter the boat feet."
+    } else if (feet < 10 || feet > 100) {
+      errors["feet"] = "Boat feet must be between 10 and 100."
+    }
+
+    if (!checkbox) {
+      errors["checkbox"] = "Please select a package."
+    }
+
+    if (!message) {
+      errors["message"] = "Please enter a message"
+    }
+    return errors
+  }
 
   const router = useRouter();
 
   const handleSubmit = (e) => {
     console.log('Sending')
     setShowErrors(true);
-    if (Object.keys(errors).length === 0) {
-      setFormFilled(true)
-    }
+
     let data = {
       name,
       email,
@@ -68,46 +100,14 @@ export default function Quote() {
         }
       })
     }
+
+    if (Object.keys(errors).length === 0) {
+      setFormFilled(true)
+    }
   }
 
   if (formFilled) {
     router.push("/confirmation");
-  }
-
-  const validateForm = () => {
-    console.log('validateForm called')
-    let errors = {}
-
-    if (!name) {
-      errors["name"] = "Please enter your name."
-    }
-
-    if (!email) {
-      errors["email"] = "Please enter your email address."
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors["email"] = "Please enter a valid email address."
-    }
-
-    if (!number) {
-      errors["number"] = "Please enter your phone number."
-    } else if (!/^[0-9]{10}$/.test(number)) {
-      errors["number"] = "Please enter a valid phone number."
-    }
-
-    if (!feet) {
-      errors["feet"] = "Please enter the boat feet."
-    } else if (feet < 10 || feet > 100) {
-      errors["feet"] = "Boat feet must be between 10 and 100."
-    }
-
-    if (!checkbox) {
-      errors["checkbox"] = "Please select a package."
-    }
-
-    if (!message) {
-      errors["message"] = "Please enter a message"
-    }
-    return errors
   }
 
   useEffect(() => {
@@ -130,7 +130,7 @@ export default function Quote() {
         <form onSubmit={(e) => {handleSubmit(e)}}>
           <label className="first_name">
             First Name
-            <input type="text" onChange={(e)=>{setName(e.target.value)}} name="name" required  />
+            <input type="text" onChange={(e)=>{setName(e.target.value)}} name="name"  required  />
             {showErrors && errors["name"] && <div className="error">{errors["name"]}</div>}
           </label>
           <label className="email">
@@ -167,7 +167,7 @@ export default function Quote() {
             <textarea onChange={(e)=>{setMessage(e.target.value)}} name="message" required/>
             {showErrors && errors["message"] && <div className="error">{errors["message"]}</div>}
           </label>
-          <Link href={formFilled ? "/confirmation" : "/quote"}>
+          <Link href={formFilled ? "/confirmation" : "#"}>
             <button className="submit" onClick={(e)=>{handleSubmit(e)}} type="submit">
               Send
             </button>
