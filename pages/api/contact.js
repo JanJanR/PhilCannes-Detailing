@@ -22,7 +22,7 @@ export default function (req, res) {
     to: process.env.email,
     subject: `Message From ${req.body.name}`,
     text: req.body.message,
-    html: ReactDOMServer.renderToString(<div><p>Name:</p>{req.body.name}<p>Email:</p>{req.body.email}<p>Number:</p>{req.body.number}<p>Package:</p>{req.body.checkbox}<p>Feet</p>{req.body.feet}ft<p>Message:</p>{req.body.message}</div>)
+    html: ReactDOMServer.renderToString(<div><strong><p>Name:</p></strong>{req.body.name}<strong><p>Email:</p></strong>{req.body.email}<strong><p>Number:</p></strong>{req.body.number}<strong><p>Package:</p></strong>{req.body.checkbox}<strong><p>Feet</p></strong>{req.body.feet}ft<strong><p>Message:</p></strong>{req.body.message}</div>)
    }
 
    transporter.sendMail(mailData, function (err, info) {
