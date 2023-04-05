@@ -21,15 +21,11 @@ export default function Confirmation() {
       <Head>
         <title>PhilCannes - Confirmation</title>
       </Head>
-      <div className="page_hero">
-        <h1>Boat Detailing</h1>
-      </div>
-      <Image className="page_image_1" src={Thankyou}/>
       <Link href="/" className={styles.back}><FontAwesomeIcon icon={faChevronLeft} className={styles.cheveron}/>home</Link>
       <div className={styles.confirmation}>
-        <p>Thank you for trusting <strong>PhilCannes Detailing</strong>! You will <br/> receive a confirmation on your email and we will be <br/> back to you !</p>
         <h2>Here is a little glimpse</h2>
         <YouTube videoId="NY0fTXIivFQ" opts={opts}/>
+        <p>Thank you for trusting <strong>PhilCannes Detailing</strong>! You will <br/> receive a confirmation on your email and we will be <br/> back to you !</p>
       </div>
     </>
   )
