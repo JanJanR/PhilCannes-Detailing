@@ -129,7 +129,6 @@ footer {
   }
 
   .footer_socialMedia_container {
-
   text-align: center;
   }
 
@@ -164,6 +163,21 @@ footer {
   .footer_youtube:hover {
     transform: scale(1.1);
     filter: drop-shadow(1px 1px 10px #FF0000);
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer_copyright{
+    color: black;
+  }
+
+  .copyright_description{
+    color: black;
+    font-size: 15px;
   }
 }
 
