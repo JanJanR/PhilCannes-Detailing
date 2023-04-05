@@ -76,7 +76,7 @@ export default function Quote() {
     const isValid = validateForm()
     if (isValid) {
       console.log("response seen")
-      fetch('/api/contact', {
+      fetch('/api/quote', {
         method: 'POST',
         headers: {
           'Accept': 'application/json, text/plain, */*',
