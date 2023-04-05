@@ -2,7 +2,6 @@ import Head from "next/head"
 import styles from "../styles/quote.module.scss"
 import Image from "next/image"
 import QuoteHero from "../public/quote1.png"
-import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { useRouter } from "next/router";
 
@@ -17,47 +16,51 @@ export default function Quote() {
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState({})
   const [formError, setFormError] = useState(false)
-  const [formFilled, setFormFilled] = useState(false)
   const [showErrors, setShowErrors] = useState(false);
 
   const validateForm = () => {
     console.log('validateForm called')
-    let errors = {}
+    let wrongInputs = {};
+
     if (!name) {
-      errors["name"] = "Please enter your name."
+      wrongInputs["name"] = "Please enter your name."
     }
 
     if (!email) {
-      errors["email"] = "Please enter your email address."
+      wrongInputs["email"] = "Please enter your email address."
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors["email"] = "Please enter a valid email address."
+      wrongInputs["email"] = "Please enter a valid email address."
     }
 
     if (!number) {
-      errors["number"] = "Please enter your phone number."
+      wrongInputs["number"] = "Please enter your phone number."
     } else if (!/\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/.test(number)) {
-      errors["number"] = "Please enter a valid phone number."
+      wrongInputs["number"] = "Please enter a valid phone number."
     }
 
     if (!feet) {
-      errors["feet"] = "Please enter the boat feet."
+      wrongInputs["feet"] = "Please enter the boat feet."
     } else if (feet < 10 || feet > 100) {
-      errors["feet"] = "Boat feet must be between 10 and 100."
+      wrongInputs["feet"] = "Boat feet must be between 10 and 100."
     }
 
     if (!checkbox) {
-      errors["checkbox"] = "Please select a package."
+      wrongInputs["checkbox"] = "Please select a package."
     }
 
     if (!message) {
-      errors["message"] = "Please enter a message"
+      wrongInputs["message"] = "Please enter a message"
     }
-    return errors
+
+    setErrors(wrongInputs)
+
+    return Object.keys(wrongInputs).length === 0;
   }
 
   const router = useRouter();
 
   const handleSubmit = (e) => {
+    e.preventDefault()
     console.log('Sending')
     setShowErrors(true);
 
@@ -70,9 +73,9 @@ export default function Quote() {
       message
     }
 
-    const isError = validateForm()
-    console.log(isError)
-    if (!isError) {
+    const isValid = validateForm()
+    if (isValid) {
+      console.log("response seen")
       fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -95,15 +98,9 @@ export default function Quote() {
           setFormError(false)
         }
       })
+      router.push("/confirmation")
     }
 
-    if (Object.keys(errors).length === 0) {
-      setFormFilled(true)
-    }
-  }
-
-  if (formFilled) {
-    router.push("/confirmation");
   }
 
   useEffect(() => {
@@ -120,7 +117,7 @@ export default function Quote() {
       <div className="page_hero">
         <h1>Get Quote Now</h1>
       </div>
-      <Image className="page_image_1" src={QuoteHero}/>
+      <Image className="page_image_1" height={475} src={QuoteHero}/>
       <div className={styles.quote_page__form}>
         <h2>Ask us for a full detail package</h2>
         <form onSubmit={(e) => {handleSubmit(e)}}>
@@ -163,11 +160,9 @@ export default function Quote() {
             <textarea onChange={(e)=>{setMessage(e.target.value)}} name="message" required/>
             {showErrors && errors["message"] && <div className="error">{errors["message"]}</div>}
           </label>
-          <Link href={formFilled ? "/confirmation" : "#"}>
-            <button className="submit" onClick={(e)=>{handleSubmit(e)}} type="submit">
-              Send
-            </button>
-          </Link>
+          <button className="submit" onClick={(e)=>{handleSubmit(e)}} type="submit">
+            Send
+          </button>
         </form>
       </div>
     </>
