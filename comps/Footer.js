@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 const Footer = () => {
   return (
     <footer>
@@ -19,6 +20,10 @@ const Footer = () => {
           <a href="https://www.instagram.com/philcannes_detailing/" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={brands('instagram')} className="footer_instagram"/>
           </a>
+        </div>
+        <div className="copyright">
+          <FontAwesomeIcon icon={regular('copyright')} className="footer_copyright"/>
+          <p className="copyright_description">Copyright 2023 PhilCannes Detailing</p>
         </div>
       </div>
       <div className="footer_description">
