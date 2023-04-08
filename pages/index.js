@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import HeroBoat from '../public/Hero-Boat.png'
+import { CldImage } from 'next-cloudinary';
+// import HeroBoat from 'https://res.cloudinary.com/dbcontco5/image/upload/v1680946425/PhilCannes/Hero-Boat_oa4kzk.png'
 import BoatServ from '../public/Group 1.png'
 import styles from '../styles/Home.module.scss'
 import { useState, useEffect } from 'react'
@@ -99,7 +100,7 @@ export default function Home() {
       <div className={styles.landing_page__hero}>
         <h1>PhilCannes<br/>Detailing</h1>
       </div>
-      <Image className={styles.landing_page__image_1} src={HeroBoat} />
+      <CldImage className={styles.landing_page__image_1} src="https://res.cloudinary.com/dbcontco5/image/upload/v1680946425/PhilCannes/Hero-Boat_oa4kzk.png" height={900} width={1000} />
       <div className={styles.landing_page__welcome}>
         <h2>Welcome!</h2>
         <p>
