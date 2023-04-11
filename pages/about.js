@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
 import AboutHero from "../public/about-hero.png"
-import Pictures from "../comps/pictures"
+import Pictures from "../comps/picturesaboutme"
 
 export default function About() {
   return (
@@ -12,10 +12,11 @@ export default function About() {
       <div className="page_hero">
         <h1>Hi Im Mark!</h1>
       </div>
-      <Image className="page_image_1" src={AboutHero} />
+      <Image className="page_image_1" src={AboutHero} alt="background image" />
       <p className="page_para">
-        Lorem ipsum dolor sit amet. Eos architecto odit sit eaque voluptatem non earum harum At temporibus doloribus. Et suscipit nemo ut ipsum quidem ex repellendus debitis eum quasi eius in officia recusandae.
-        Vel iusto natus nam officiis velit est illum doloribus sit facere sunt non debitis placeat aut quasi minus. Qui modi reiciendis vel culpa internos ut eligendi ullam aut earum voluptas aut natus asperiores. Non ullam nemo ut quisquam eaque id omnis iusto cum neque nulla.
+        I am originally from the Philippines living now in Cannes, France since 2003. I have 3 lovely kids and an amazing wife. In my spare time, I love cycling, playing basketball,
+        and filming all the best moments in my life. I am very dedicated to my work and the people I work with, and it would be an honor to be able to detail your boat.
+        I intend to grow my knowledge in detailing so I can provide the best work for my clients. I look forward to serving you. Thank You!
       </p>
       <div className="border"></div>
       <Pictures />
