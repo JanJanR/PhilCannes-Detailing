@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { CldImage } from 'next-cloudinary';
-// import HeroBoat from 'https://res.cloudinary.com/dbcontco5/image/upload/v1680946425/PhilCannes/Hero-Boat_oa4kzk.png'
 import Videobg from '/public/Hero-video.mp4'
 import BoatServ from '/public/Group 1.png'
 import styles from '../styles/Home.module.scss'
@@ -101,24 +99,23 @@ export default function Home() {
       <div className={styles.landing_page__hero}>
         <h1>PhilCannes<br/>Detailing</h1>
       </div>
-      {/* <div className={styles.overlay}></div> */}
       <video src={Videobg} className={styles.landing_page__image_1} type='video/mp4' autoPlay loop muted/>
       <div className={styles.landing_page__welcome}>
         <h2>Welcome!</h2>
         <p>
-          Lorem ipsum dolor sit amet. Eos architecto odit sit eaque voluptatem non earum harum At temporibus doloribus. Et suscipit nemo ut ipsum quidem ex repellendus debitis eum quasi eius in officia recusandae.
-          Vel iusto natus nam officiis velit est illum doloribus sit facere sunt non debitis placeat aut quasi minus. Qui modi reiciendis vel culpa internos ut eligendi ullam aut earum voluptas aut natus asperiores. Non ullam nemo ut quisquam eaque id omnis iusto cum neque nulla.
+          We provide professional service together with the best products on the market to enhance your boats appearance. Our number 1 goal is to make our clients feel amazing while operating their freshly detailed boat.
+          We are very dedicated to our work, and it would be an honor to be able to detail your boat. If you got any question not related to the boat detailing feel free to fill up the form down this page.
         </p>
       </div>
       <div className={styles.border}></div>
       <div className={styles.landing_page__boat_services}>
           <h2>Boat Services</h2>
-          <p>Lorem ipsum dolor sit amet. Eos architecto odit sit eaque voluptatem non earum harum At temporibus doloribus.</p>
-          <Link href="/quote">
-            <button>Get Quote</button>
+          <p>View our boat detailing packages. We have many different packages to chose from to fit you detailing needs!</p>
+          <Link href="/boat-detailing">
+            <button>Let's Go</button>
           </Link>
       </div>
-      <Image className={styles.landing_page__image_2} src={BoatServ}/>
+      <Image className={styles.landing_page__image_2} src={BoatServ} alt='wavy image'/>
       <div className={styles.border}></div>
       <div className={styles.landing_page__contact}>
         <h2>Contact Us</h2>

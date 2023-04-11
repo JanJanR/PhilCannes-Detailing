@@ -30,7 +30,7 @@ const Footer = () => {
         <h3>Mark Del Rosario Mendoza</h3>
         <p>South of France, Côtes d'Azur</p>
         <p>philcannesdetailing@gmail.com</p>
-        <p>0123456789</p>
+        <p>+33 7 86 03 24 33</p>
       </div>
     </footer>
    );
