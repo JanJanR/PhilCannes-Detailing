@@ -1,5 +1,5 @@
-import Boat1 from "../public/boat1.png"
-import Boat2 from "../public/boat2.png"
+import Boat1 from "../public/boat1.jpg"
+import Boat2 from "../public/boat2.jpg"
 import Boat3 from "../public/boat3.png"
 import Boat4 from "../public/boat4.png"
 import Boat5 from "../public/boat5.png"
