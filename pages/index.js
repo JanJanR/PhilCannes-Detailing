@@ -3,7 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CldImage } from 'next-cloudinary';
 // import HeroBoat from 'https://res.cloudinary.com/dbcontco5/image/upload/v1680946425/PhilCannes/Hero-Boat_oa4kzk.png'
-import BoatServ from '../public/Group 1.png'
+import Videobg from '/public/Hero-video.mp4'
+import BoatServ from '/public/Group 1.png'
 import styles from '../styles/Home.module.scss'
 import { useState, useEffect } from 'react'
 import { useRouter } from "next/router";
@@ -100,7 +101,8 @@ export default function Home() {
       <div className={styles.landing_page__hero}>
         <h1>PhilCannes<br/>Detailing</h1>
       </div>
-      <CldImage className={styles.landing_page__image_1} src="https://res.cloudinary.com/dbcontco5/image/upload/v1680946425/PhilCannes/Hero-Boat_oa4kzk.png" height={900} width={1000} />
+      {/* <div className={styles.overlay}></div> */}
+      <video src={Videobg} className={styles.landing_page__image_1} type='video/mp4' autoPlay loop muted/>
       <div className={styles.landing_page__welcome}>
         <h2>Welcome!</h2>
         <p>
@@ -116,7 +118,7 @@ export default function Home() {
             <button>Get Quote</button>
           </Link>
       </div>
-      <Image className={styles.landing_page__image_2} src={BoatServ} />
+      <Image className={styles.landing_page__image_2} src={BoatServ}/>
       <div className={styles.border}></div>
       <div className={styles.landing_page__contact}>
         <h2>Contact Us</h2>

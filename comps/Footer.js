@@ -29,7 +29,7 @@ const Footer = () => {
       <div className="footer_description">
         <h3>Mark Del Rosario Mendoza</h3>
         <p>South of France, Côtes d'Azur</p>
-        <p>email@email.com</p>
+        <p>philcannesdetailing@gmail.com</p>
         <p>0123456789</p>
       </div>
     </footer>
