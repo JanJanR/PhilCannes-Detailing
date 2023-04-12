@@ -324,7 +324,7 @@ form {
 
   .dropdown {
     grid-column: 1 / -1;
-    height: 110vh;
+    height: 105vh;
     background-color: #100F0D;
     position: sticky;
     top: 70px;
@@ -421,6 +421,12 @@ form {
     }
   }
 
+}
+
+@media (max-height: 700px) {
+  .page_hero{
+    height: 80vh;
+  }
 }
 
 // Media Query for Mobile
