@@ -40,7 +40,7 @@ export default function BoatDetailing() {
                 <li>Top Side Wax</li>
               </ul>
             </div>
-            <div>
+            <div className={styles.bottom_cards}>
               <p className={styles.boat_detailing__price}>15€/foot</p>
               <Link href="/quote" >
                 <button>Get Quote</button>
@@ -65,8 +65,8 @@ export default function BoatDetailing() {
                 <li>Wax</li>
               </ul>
             </div>
+            <div className={styles.bottom_cards}>
               <p className={styles.boat_detailing__price}>15€/foot</p>
-            <div>
               <Link href="/quote">
                 <button>Get Quote</button>
               </Link>
