@@ -5,7 +5,7 @@ import Boat4 from "../public/boat4.mp4"
 import Boat5 from "../public/boat5.jpg"
 import Boat6 from "../public/boat6.mp4"
 import Image from "next/image"
-import Animation from "/comps/Animation"
+import fadeinLeft from "/comps/Animations/FadeInLeft"
 import { motion } from "framer-motion"
 
 export default function Pictures() {
@@ -14,7 +14,7 @@ export default function Pictures() {
       initial="hide"
       whileInView="show"
       viewport={{ once: true }}
-      variants={Animation}
+      variants={fadeinLeft}
     >
       <Image className="page__pic" src={Boat1} alt="picture"/>
       <video src={Boat6} className="page__pic" type='video/mp4' autoPlay loop muted/>

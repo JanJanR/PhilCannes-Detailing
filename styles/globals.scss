@@ -49,22 +49,28 @@ a {
 
 // Navbar
 
-nav {
+.nav {
   grid-column: 1 / -1;
   position: sticky;
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #100F0D;
-  padding: 0 100px;
-  box-shadow: 1px 1px 30px #38b6ff;
   z-index: 1;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #100F0D;
+    padding: 0 100px;
+    box-shadow: 1px 1px 30px #38b6ff;
 
     .bar {
       color: white;
       cursor: pointer;
       display: none;
+    }
+
+    a {
+      height: 70px;
     }
 
     .navbar_links {
@@ -75,7 +81,6 @@ nav {
         font-size: 15px;
         border-bottom: transparent solid 1px;
         padding-bottom: 5px;
-
       }
 
       a:hover {
@@ -85,6 +90,7 @@ nav {
       }
 
     }
+  }
 
 }
 
@@ -295,6 +301,14 @@ form {
     border-bottom: 2px solid #38B6FF;
   }
 
+  input[type=number]:focus, textarea:focus {
+    border-bottom: 2px solid #38B6FF;
+  }
+
+  input[type=email]:focus, textarea:focus {
+    border-bottom: 2px solid #38B6FF;
+  }
+
   .submit {
     grid-column: 1 ;
     width: 150px;
@@ -315,11 +329,13 @@ form {
     font-size: 16px;
   }
 
-  nav {
+  .nav {
+    nav {
       .bar {
         display: block;
         font-size: 30px;
       }
+    }
   }
 
   .dropdown {

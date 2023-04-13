@@ -1,4 +1,4 @@
-const Animation = {
+const fadeinLeft = {
   hide: {
     opacity: 0,
      x: -200,
@@ -12,4 +12,4 @@ const Animation = {
   },
 }
 
-export default Animation;
+export default fadeinLeft;

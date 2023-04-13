@@ -11,7 +11,7 @@ const Layout = ( { children }) => {
     <div className="grid">
       <Navbar className="navbar" xmark={xmark} setXmark={setXmark}/>
       {xmark && <Dropdown xmark={xmark} setXmark={setXmark} />}
-        { children }
+      { children }
       <Footer className="footer" />
     </div>
    );

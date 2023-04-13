@@ -2,7 +2,7 @@ import Head from "next/head"
 import Image from "next/image"
 import AboutHero from "../public/about-hero.png"
 import Pictures from "../comps/picturesaboutme"
-import Animation from "/comps/Animation"
+import fadeinLeft from "@/comps/Animations/FadeInLeft"
 import { motion } from "framer-motion"
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
         initial="hide"
         whileInView="show"
         viewport={{ once: true }}
-        variants={Animation}
+        variants={fadeinLeft}
       >
         I am originally from the Philippines living now in Cannes, France since 2003. I have 3 lovely kids and an amazing wife. In my spare time, I love cycling, playing basketball,
         and filming all the best moments in my life. I am very dedicated to my work and the people I work with, and it would be an honor to be able to detail your boat.
