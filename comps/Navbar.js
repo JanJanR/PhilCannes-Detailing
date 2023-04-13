@@ -46,7 +46,9 @@ const Navbar = ({xmark, setXmark}) => {
           variants={fadeinTop}
         >
           <nav>
-            <Image src="/PhilCannes Logo (1) 3.png" width={70} height={70} />
+            <Link href="/">
+              <Image src="/PhilCannes Logo (1) 3.png" width={70} height={70} />
+            </Link>
             <FontAwesomeIcon
               icon={xmark ? faXmark : faBars}
               className="bar"
@@ -64,7 +66,9 @@ const Navbar = ({xmark, setXmark}) => {
       {!isLandingPage && (
         <div className="nav">
           <nav>
-            <Image src="/PhilCannes Logo (1) 3.png" width={70} height={70} />
+            <Link href="/">
+              <Image src="/PhilCannes Logo (1) 3.png" width={70} height={70} />
+            </Link>
             <FontAwesomeIcon
               icon={xmark ? faXmark : faBars}
               className="bar"
