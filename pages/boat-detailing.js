@@ -5,6 +5,8 @@ import BoatDetailingHero from "../public/boat-detailing-hero.png"
 import Background from "../public/Group 2.png"
 import styles from "../styles/boat-detailing.module.scss"
 import Pictures from "../comps/picturesboatdetailing"
+import Animation from "/comps/Animation"
+import { motion } from "framer-motion"
 
 export default function BoatDetailing() {
   return (
@@ -16,13 +18,23 @@ export default function BoatDetailing() {
         <h1>Boat Detailing</h1>
       </div>
       <Image className="page_image_1" src={BoatDetailingHero} alt="background image"/>
-      <p className="page_para">
+      <motion.p className="page_para"
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={Animation}
+      >
       We strive to bring your boat back to showroom quality with every detail. Whether your boat is large or small, We assure you that we will get the job done in a timely manner while achieving the highest standards possible. We are a 100% mobile company, and can go to any location here in the Côtes d'Azur. Do not hesitate to contact us to start improving your boat's appearance TODAY!
-      </p>
+      </motion.p>
       <div className="border"></div>
       <Pictures />
       <div className="border"></div>
-      <div className={styles.boat_detailing__packages}>
+      <motion.div className={styles.boat_detailing__packages}
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={Animation}
+      >
         <h2>Packages</h2>
         <div className={styles.boat_detailing__cards}>
           <div className={styles.boat_detailing__card}>
@@ -73,7 +85,7 @@ export default function BoatDetailing() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <Image className={styles.boat_detailing__background} src={Background} alt="background"/>
     </>
   )

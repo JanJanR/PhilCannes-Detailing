@@ -5,7 +5,9 @@ import Videobg from '/public/Hero-video.mp4'
 import BoatServ from '/public/Group 1.png'
 import styles from '../styles/Home.module.scss'
 import { useState, useEffect } from 'react'
-import { useRouter } from "next/router";
+import { useRouter } from "next/router"
+import { delay, motion } from "framer-motion"
+import Animation from "/comps/Animation"
 
 export default function Home() {
   const [name, setName] = useState('')
@@ -91,30 +93,46 @@ export default function Home() {
   useEffect(() => {
     setErrors(validateForm())
   }, [name, email, number, message])
+
+
   return (
     <>
       <Head>
         <title>PhilCannes - Home</title>
       </Head>
-      <div className={styles.landing_page__hero}>
+      <motion.div className={styles.landing_page__hero}
+        initial={{opacity: 0}}
+        animate={{opacity:1}}
+        transition={{delay: 3}}
+      >
         <h1>PhilCannes<br/>Detailing</h1>
-      </div>
+      </motion.div>
       <video src={Videobg} className={styles.landing_page__image_1} type='video/mp4' autoPlay loop muted/>
-      <div className={styles.landing_page__welcome}>
+      <motion.div className={styles.landing_page__welcome}
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={Animation}
+      >
         <h2>Welcome!</h2>
         <p>
           We provide professional service together with the best products on the market to enhance your boats appearance. Our number 1 goal is to make our clients feel amazing while operating their freshly detailed boat.
           We are very dedicated to our work, and it would be an honor to be able to detail your boat. If you got any question not related to the boat detailing feel free to fill up the form down this page.
         </p>
-      </div>
+      </motion.div>
       <div className={styles.border}></div>
-      <div className={styles.landing_page__boat_services}>
+      <motion.div className={styles.landing_page__boat_services}
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants= {Animation}
+      >
           <h2>Boat Services</h2>
           <p>View our boat detailing packages. We have many different packages to chose from to fit you detailing needs!</p>
           <Link href="/boat-detailing">
             <button>Let's Go</button>
           </Link>
-      </div>
+      </motion.div>
       <Image className={styles.landing_page__image_2} src={BoatServ} alt='wavy image'/>
       <div className={styles.border}></div>
       <div className={styles.landing_page__contact}>
