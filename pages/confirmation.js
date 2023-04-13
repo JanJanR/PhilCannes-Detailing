@@ -10,8 +10,8 @@ import {faChevronLeft} from "@fortawesome/free-solid-svg-icons"
 
 export default function Confirmation() {
   const opts = {
-    height: "300",
-    width: "425",
+    height: "225",
+    width: "400",
     playerVars: {
       autoplay: 1,
       mute: 1,
@@ -26,7 +26,7 @@ export default function Confirmation() {
       <div className={styles.confirmation}>
         <h2>Here is a little glimpse</h2>
         <YouTube videoId="NY0fTXIivFQ" opts={opts}/>
-        <p className={styles.greetings}>Thank you for trusting <strong>PhilCannes Detailing</strong>! You will <br/> receive a confirmation on your email and we will be <br/> back to you !</p>
+        <p className={styles.greetings}>Thank you for trusting <strong>PhilCannes Detailing</strong>! We will be back to you within 24 hours ! While waiting checkout my youtube videos and some of my post on instagram.</p>
       </div>
     </>
   )
