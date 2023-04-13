@@ -95,6 +95,16 @@
 //   background-color: rgba(0, 0, 0, 0.4);
 // }
 
+@media (min-width: 1900px){
+  .landing_page__welcome{
+    margin-top: 0;
+  }
+
+  .landing_page__boat_services{
+    margin-bottom: 100px;
+  }
+}
+
 @media (max-width: 1000px) {
   .landing_page__image_2 {
     top: 44%;
