@@ -72,6 +72,12 @@
 
 // Media Query for medium screens
 
+@media (min-width: 1900px){
+  .boat_detailing__card{
+    width: 18%;
+  }
+}
+
 @media (max-width: 1000px) {
   .boat_detailing__cards {
     flex-direction: column;

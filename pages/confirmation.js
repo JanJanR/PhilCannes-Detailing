@@ -10,8 +10,6 @@ import {faChevronLeft} from "@fortawesome/free-solid-svg-icons"
 
 export default function Confirmation() {
   const opts = {
-    height: "225",
-    width: "400",
     playerVars: {
       autoplay: 1,
       mute: 1,
