@@ -24,9 +24,8 @@ export default function Confirmation() {
       <div className={styles.confirmation}>
         <h2>Here is a little glimpse</h2>
         <YouTube videoId="NY0fTXIivFQ" opts={opts}/>
-        <p className={styles.greetings}>Thank you for trusting <strong>PhilCannes Detailing</strong>! We will be back to you within 24 hours ! While waiting checkout my youtube videos and some of my post on instagram.</p>
+        <p className={styles.greetings}>Thank you for trusting <strong>PhilCannes Detailing</strong>! We will be back to you within 24 hours! While waiting check out my youtube videos and some of my posts on Instagram.</p>
       </div>
     </>
   )
-
 }
