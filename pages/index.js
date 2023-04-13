@@ -7,7 +7,7 @@ import styles from '../styles/Home.module.scss'
 import { useState, useEffect } from 'react'
 import { useRouter } from "next/router"
 import { delay, motion } from "framer-motion"
-import Animation from "/comps/Animation"
+import FadeInLeft from "/comps/Animations/FadeInLeft"
 
 export default function Home() {
   const [name, setName] = useState('')
@@ -112,7 +112,7 @@ export default function Home() {
         initial="hide"
         whileInView="show"
         viewport={{ once: true }}
-        variants={Animation}
+        variants={FadeInLeft}
       >
         <h2>Welcome!</h2>
         <p>
@@ -125,7 +125,7 @@ export default function Home() {
         initial="hide"
         whileInView="show"
         viewport={{ once: true }}
-        variants= {Animation}
+        variants= {FadeInLeft}
       >
           <h2>Boat Services</h2>
           <p>View our boat detailing packages. We have many different packages to chose from to fit you detailing needs!</p>

@@ -5,7 +5,7 @@ import BoatDetailingHero from "../public/boat-detailing-hero.png"
 import Background from "../public/Group 2.png"
 import styles from "../styles/boat-detailing.module.scss"
 import Pictures from "../comps/picturesboatdetailing"
-import Animation from "/comps/Animation"
+import fadeinLeft from "/comps/Animations/FadeInLeft"
 import { motion } from "framer-motion"
 
 export default function BoatDetailing() {
@@ -22,7 +22,7 @@ export default function BoatDetailing() {
         initial="hide"
         whileInView="show"
         viewport={{ once: true }}
-        variants={Animation}
+        variants={fadeinLeft}
       >
       We strive to bring your boat back to showroom quality with every detail. Whether your boat is large or small, We assure you that we will get the job done in a timely manner while achieving the highest standards possible. We are a 100% mobile company, and can go to any location here in the Côtes d'Azur. Do not hesitate to contact us to start improving your boat's appearance TODAY!
       </motion.p>
@@ -33,7 +33,7 @@ export default function BoatDetailing() {
         initial="hide"
         whileInView="show"
         viewport={{ once: true }}
-        variants={Animation}
+        variants={fadeinLeft}
       >
         <h2>Packages</h2>
         <div className={styles.boat_detailing__cards}>
