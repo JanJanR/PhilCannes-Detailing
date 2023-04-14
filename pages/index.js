@@ -107,7 +107,7 @@ export default function Home() {
       >
         <h1>PhilCannes<br/>Detailing</h1>
       </motion.div>
-      <video src={Videobg} className={styles.landing_page__image_1} type='video/mp4' autoPlay loop muted playsInline/>
+      <video src={Videobg} className={styles.landing_page__image_1} type='video/mp4' autoPlay="" loop="" muted="" playsInline="" preload='auto'/>
       <motion.div className={styles.landing_page__welcome}
         initial="hide"
         whileInView="show"

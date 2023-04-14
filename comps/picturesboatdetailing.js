@@ -17,10 +17,10 @@ export default function Pictures() {
       variants={fadeinLeft}
     >
       <Image className="page__pic" src={Boat1} alt="picture"/>
-      <video src={Boat6} className="page__pic" type='video/mp4' autoPlay loop muted playsInline/>
+      <video src={Boat6} className="page__pic" type='video/mp4' autoPlay="" loop="" muted="" playsInline="" preload="auto"/>
       <Image className="page__pic" src={Boat2} alt="picture"/>
       <Image className="page__pic" src={Boat5} alt="picture"/>
-      <video src={Boat4} className="page__pic" type='video/mp4' autoPlay loop muted playsInline/>
+      <video src={Boat4} className="page__pic" type='video/mp4' autoPlay="" loop="" muted="" playsInline="" preload="auto"/>
       <Image className="page__pic" src={Boat3} alt="picture"/>
     </motion.div>
   )
