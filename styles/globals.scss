@@ -463,8 +463,10 @@ form {
     grid-template-columns: 50px auto 50px;
   }
 
-  nav {
-    padding: 0 50px;
+  .nav {
+    nav {
+      padding: 0 50px;
+    }
   }
 
   footer {
