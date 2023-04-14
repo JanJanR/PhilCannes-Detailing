@@ -12,7 +12,7 @@
   object-fit: cover;
   object-position: center;
   position: absolute;
-  bottom: 6%;
+  bottom: -1%;
   z-index: -1;
 }
 
@@ -82,7 +82,26 @@
   }
 }
 
+@media (max-width: 1250px) {
+  .boat_detailing__background {
+    bottom: -2%;
+  }
+}
+
 @media (max-width: 1000px) {
+  .black_bg {
+    grid-column: 1 / -1;
+    background-color: #100F0D;
+    z-index: -1;
+    position: absolute;
+    bottom: 5%;
+    height: 500px;
+    width: 100%;
+  }
+
+  .boat_detailing__background {
+    bottom: 14%;
+  }
   .boat_detailing__cards {
     flex-direction: column;
     align-items: center;
@@ -100,5 +119,17 @@
         margin: 0;
       }
     }
+  }
+}
+
+@media (max-width: 890px) {
+  .boat_detailing__background {
+    bottom: 11%;
+  }
+}
+
+@media (max-width: 650px) {
+  .boat_detailing__background {
+    bottom: 11%;
   }
 }

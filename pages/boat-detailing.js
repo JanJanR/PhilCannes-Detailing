@@ -87,6 +87,7 @@ export default function BoatDetailing() {
         </div>
       </motion.div>
       <Image className={styles.boat_detailing__background} src={Background} alt="background"/>
+      <div className={styles.black_bg}></div>
     </>
   )
 }
